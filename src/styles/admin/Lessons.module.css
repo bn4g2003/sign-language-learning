@@ -1,0 +1,188 @@
+/* styles/admin/Lessons.module.css */
+.lessonsContainer {
+    display: flex;
+    min-height: 100vh;
+    background: #f5f0ff; /* Nền tím nhạt đồng bộ với admin */
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .mainContent {
+    margin-left: 300px;
+    padding: 2rem;
+    width: calc(100% - 200px);
+  }
+  
+  .pageTitle {
+    font-size: 2.8rem;
+    color: #6b48ff; /* Màu tím cho admin */
+    margin-bottom: 2rem;
+    font-weight: 600;
+  }
+  
+  .sectionTitle {
+    font-size: 2rem;
+    color: #6b48ff;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+  }
+  
+  .lessonsTableContainer {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+  }
+  
+  .lessonsTable {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .lessonsTable th,
+  .lessonsTable td {
+    padding: 1rem;
+    text-align: left;
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  .lessonsTable th {
+    background: #f9f5ff; /* Nền tím nhạt cho header */
+    font-weight: 600;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  .lessonsTable td {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .lessonsTable tr:hover {
+    background: #f9fafb; /* Hover nhẹ cho hàng */
+  }
+  
+  .deleteButton {
+    background: #e74c3c; /* Màu đỏ cho nút xóa */
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .deleteButton:hover {
+    background: #c0392b; /* Đỏ đậm hơn khi hover */
+  }
+  
+  .addLessonForm {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .inputField {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  .inputField:focus {
+    outline: none;
+    border-color: #6b48ff; /* Tím khi focus */
+  }
+  
+  .textareaField {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    min-height: 100px;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+  }
+  
+  .textareaField:focus {
+    outline: none;
+    border-color: #6b48ff;
+  }
+  
+  .selectField {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    background: white;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+  }
+  
+  .selectField:focus {
+    outline: none;
+    border-color: #6b48ff;
+  }
+  
+  .addButton {
+    background: #6b48ff; /* Button tím */
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .addButton:hover {
+    background: #5438cc; /* Tím đậm hơn khi hover */
+  }
+  
+  .loadingText {
+    font-size: 1.2rem;
+    color: #555;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .mainContent {
+      margin-left: 0; /* Xóa margin trên mobile nếu Sidebar ẩn */
+      padding: 1rem;
+    }
+  
+    .pageTitle {
+      font-size: 2.2rem;
+    }
+  
+    .sectionTitle {
+      font-size: 1.6rem;
+    }
+  
+    .lessonsTable th,
+    .lessonsTable td {
+      font-size: 0.9rem;
+      padding: 0.75rem;
+    }
+  
+    .inputField,
+    .textareaField,
+    .selectField {
+      font-size: 1rem;
+    }
+  
+    .addButton {
+      font-size: 1rem;
+      padding: 0.75rem 1.5rem;
+    }
+  }

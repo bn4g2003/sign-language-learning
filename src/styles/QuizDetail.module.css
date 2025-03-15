@@ -1,0 +1,158 @@
+/* styles/QuizDetail.module.css */
+.quizDetailContainer {
+    min-height: 100vh;
+    background: #f0f2f5;
+    padding: 2rem;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .pageTitle {
+    text-align: center;
+    font-size: 2.8rem;
+    color: #1a73e8;
+    margin-bottom: 2.5rem;
+    font-weight: 600;
+  }
+  
+  .quizContent {
+    max-width: 1200px; /* Tăng chiều rộng để chứa hình và câu hỏi ngang nhau */
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .questionContainer {
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    gap: 2rem; /* Khoảng cách giữa hình và nội dung */
+    margin-bottom: 2rem;
+  }
+  
+  .questionImage {
+    width: 50%; /* Hình chiếm 50% chiều rộng */
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .questionTextWrapper {
+    width: 50%; /* Nội dung chiếm 50% chiều rộng */
+  }
+  
+  .questionTitle {
+    font-size: 1.8rem;
+    color: #1a73e8;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+  }
+  
+  .choicesContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .choiceButton {
+    background: #f9fafb;
+    color: #333;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Hiệu ứng mượt mà cho tất cả thay đổi */
+  }
+  
+  .choiceButton:hover {
+    background: #e8f0fe;
+    transform: scale(1.02); /* Phóng to nhẹ khi hover */
+  }
+  
+  .choiceButton.selected {
+    background: #1a73e8; /* Đổi thành xanh đậm khi chọn */
+    color: white;
+    border-color: #1a73e8;
+    transform: scale(1.05); /* Phóng to nhẹ khi được chọn */
+    box-shadow: 0 4px 12px rgba(26, 115, 232, 0.3); /* Thêm bóng đẹp */
+  }
+  
+  .nextButton {
+    background: #1a73e8;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .nextButton:hover {
+    background: #1557b0;
+  }
+  
+  .completedSection {
+    text-align: center;
+  }
+  
+  .completedTitle {
+    font-size: 2rem;
+    color: #1a73e8;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+  
+  .scoreText {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .loadingText {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .quizDetailContainer {
+      padding: 1rem;
+    }
+  
+    .pageTitle {
+      font-size: 2.2rem;
+    }
+  
+    .quizContent {
+      padding: 1.5rem;
+    }
+  
+    .questionContainer {
+      flex-direction: column; /* Xếp dọc trên mobile */
+      gap: 1rem;
+    }
+  
+    .questionImage,
+    .questionTextWrapper {
+      width: 100%; /* Full-width trên mobile */
+    }
+  
+    .questionTitle {
+      font-size: 1.5rem;
+    }
+  
+    .choiceButton {
+      font-size: 1rem;
+      padding: 0.75rem;
+    }
+  
+    .nextButton {
+      font-size: 1rem;
+      padding: 0.75rem 1.5rem;
+    }
+  }

@@ -1,0 +1,63 @@
+/* components/LessonCard.module.css */
+.card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 350px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cardImage {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 1rem;
+}
+
+.cardContent {
+  flex: 1;
+}
+
+.cardTitle {
+  font-size: 1.3rem;
+  color: #1a73e8;
+  margin: 0 0 0.5rem 0;
+  font-weight: 500;
+}
+
+.cardDescription {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0 0 0.5rem 0; /* Thêm margin-bottom để tách khỏi progress */
+}
+
+.cardProgress {
+  font-size: 0.9rem;
+  color: #1a73e8;
+  font-weight: 500;
+  margin: 0;
+  background: #e8f0fe; /* Nền nhẹ giống Profile */
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+}

@@ -1,0 +1,175 @@
+/* styles/LessonDetail.module.css */
+.lessonDetailContainer {
+    min-height: 100vh;
+    background: #f0f2f5;
+    padding: 3rem; /* Tăng padding để thoáng hơn */
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .pageTitle {
+    text-align: center;
+    font-size: 2.8rem; /* Tăng cỡ chữ tiêu đề trang */
+    color: #1a73e8;
+    margin-bottom: 2.5rem;
+    font-weight: 600;
+  }
+  
+  .lessonButton {
+    background: #1a73e8;
+    color: white;
+    padding: 1rem 2rem; /* Tăng kích thước button */
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem; /* Tăng cỡ chữ button */
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin: 0.75rem 0; /* Tăng khoảng cách */
+  }
+  
+  .lessonButton:hover {
+    background: #1557b0;
+  }
+  
+  .lessonContent {
+    max-width: 1400px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    padding: 2rem; /* Tăng padding trong card */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .lessonTitle {
+    font-size: 2.2rem; /* Tăng cỡ chữ tiêu đề lesson */
+    color: #1a73e8;
+    margin: 0 0 1.5rem 0;
+    font-weight: 500;
+  }
+  
+  .lessonText {
+    font-size: 1.2rem; /* Tăng cỡ chữ nội dung */
+    color: #555;
+    margin: 0 0 1.5rem 0;
+    line-height: 1.6; /* Tăng khoảng cách dòng cho dễ đọc */
+  }
+  
+  .lessonMedia {
+    margin: 1.5rem 0;
+  }
+  
+  .lessonMedia video,
+  .lessonMedia img {
+    max-width: 100%;
+    border-radius: 8px;
+    width: 100%; /* Đảm bảo media chiếm toàn chiều rộng */
+    max-height: 500px; /* Tăng chiều cao tối đa */
+    object-fit: cover; /* Giữ tỷ lệ hình ảnh/video */
+  }
+  
+  .qnaSection {
+    margin-top: 3rem; /* Tăng khoảng cách trên */
+  }
+  
+  .qnaSection h3 {
+    font-size: 1.8rem; /* Tăng cỡ chữ tiêu đề Q&A */
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+  
+  .askItem {
+    background: #f9fafb;
+    padding: 1.5rem; /* Tăng padding */
+    border-radius: 8px;
+    margin-bottom: 1.5rem; /* Thay cho inline marginBottom */
+  }
+  
+  .askItem p {
+    margin: 0 0 0.75rem 0;
+    font-size: 1.2rem; /* Tăng cỡ chữ câu hỏi */
+    color: #333;
+  }
+  
+  .askItem strong {
+    color: #1a73e8;
+  }
+  
+  .answerSection {
+    margin-left: 2rem; /* Thay cho inline marginLeft */
+    margin-top: 1rem;
+  }
+  
+  .answerSection p {
+    font-size: 1.1rem; /* Tăng cỡ chữ câu trả lời */
+    color: #555;
+    margin: 0.75rem 0;
+  }
+  
+  .askForm,
+  .answerSection textarea {
+    width: 100%;
+    padding: 1rem; /* Tăng padding textarea */
+    margin: 0.75rem 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1.1rem; /* Tăng cỡ chữ trong textarea */
+    resize: vertical;
+    min-height: 120px; /* Tăng chiều cao tối thiểu textarea */
+  }
+  
+  .askForm textarea:focus,
+  .answerSection textarea:focus {
+    outline: none;
+    border-color: #1a73e8;
+  }
+  
+  .loadingText {
+    text-align: center;
+    font-size: 1.2rem; /* Tăng cỡ chữ Loading */
+    color: #555;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .lessonDetailContainer {
+      padding: 1.5rem;
+    }
+  
+    .pageTitle {
+      font-size: 2.2rem;
+    }
+  
+    .lessonContent {
+      padding: 1.5rem;
+    }
+  
+    .lessonTitle {
+      font-size: 1.8rem;
+    }
+  
+    .lessonText {
+      font-size: 1rem;
+    }
+  
+    .lessonButton {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+    }
+  
+    .askItem {
+      padding: 1rem;
+    }
+  }
+  
+  /* Ghi chú để bạn tự sửa:
+  - Để tăng cỡ chữ lớn hơn nữa:
+    + .pageTitle: font-size (hiện 2.8rem)
+    + .lessonTitle: font-size (hiện 2.2rem)
+    + .lessonText: font-size (hiện 1.2rem)
+    + .askItem p: font-size (hiện 1.2rem)
+    + .answerSection p: font-size (hiện 1.1rem)
+    + .lessonButton: font-size (hiện 1.2rem)
+  - Để tăng kích thước button: Điều chỉnh padding trong .lessonButton (hiện 1rem 2rem)
+  - Để tăng kích thước textarea: Điều chỉnh min-height trong .askForm, .answerSection textarea (hiện 120px)
+  - Để tăng kích thước media (video/hình): Điều chỉnh max-height trong .lessonMedia video, .lessonMedia img (hiện 500px)
+  - Để tăng khoảng cách: Điều chỉnh padding/margin trong các class (ví dụ: .lessonDetailContainer, .lessonContent, .qnaSection)
+  */

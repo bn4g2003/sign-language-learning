@@ -1,0 +1,178 @@
+/* Profile.module.css */
+.profileContainer {
+  min-height: 100vh;
+  background: #f0f2f5;
+  padding: 2rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.pageTitle {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #1a73e8;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+/* Profile Section */
+.profileSection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 2000px; /* Tăng chiều rộng tối đa để hai ô dài hơn theo chiều ngang */
+  margin: 0 auto 2rem;
+}
+
+/* Section General Styling */
+.section {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  flex: 1;
+  min-width: 700px; /* Tăng min-width để ô dài hơn theo chiều ngang */
+  transition: box-shadow 0.3s ease;
+}
+
+.section:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile Info */
+.profileInfo {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.avatar {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #1a73e8;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.userDetails {
+  flex: 1;
+}
+
+.userDetails p {
+  margin: 0.5rem 0;
+  font-size: 1.5rem; /* Tăng cỡ chữ thông tin người dùng lên 1.25rem, bạn có thể sửa thành 1.5rem nếu muốn lớn hơn */
+  color: #333;
+}
+
+.userDetails strong {
+  color: #1a73e8;
+  margin-right: 0.5rem;
+}
+
+/* Edit Profile */
+.editProfile h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.editProfile input,
+.editProfile textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.editProfile input:focus,
+.editProfile textarea:focus {
+  outline: none;
+  border-color: #1a73e8;
+}
+
+.editProfile textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.updateButton {
+  background: #1a73e8;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.updateButton:hover {
+  background: #1557b0;
+}
+
+/* Learning Progress */
+.learningProgress h2,
+.quizProgress h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.categoryProgress {
+  background: #e8f0fe;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  color: #1a73e8;
+  font-weight: 500;
+}
+
+/* Quiz Progress */
+.quizItem {
+  background: #f9fafb;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+}
+
+.quizItem p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.quizItem strong {
+  color: #1a73e8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profileSection {
+    flex-direction: column;
+  }
+
+  .profileInfo {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .pageTitle {
+    font-size: 1.8rem;
+  }
+}
+
+/* Ghi chú để bạn tự sửa:
+- Để tăng chiều dài ngang của hai ô 'Thông tin' và 'Chỉnh sửa thông tin':
+  + Tăng giá trị 'max-width' trong .profileSection (hiện tại là 1400px).
+  + Tăng giá trị 'min-width' trong .section (hiện tại là 400px).
+- Để tăng cỡ chữ thông tin người dùng:
+  + Điều chỉnh 'font-size' trong .userDetails p (hiện tại là 1.25rem, bạn có thể thử 1.5rem hoặc lớn hơn).
+*/

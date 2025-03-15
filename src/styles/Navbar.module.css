@@ -1,0 +1,139 @@
+/* Thanh điều hướng */
+.navbar {
+  background: linear-gradient(135deg, #34495e, #2c3e50);
+  padding: 20px 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Container chính */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo */
+.logo img {
+  display: block;
+  cursor: pointer;
+}
+
+/* Menu */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  display: flex;
+  align-items: center;
+}
+
+/* Hiệu ứng hover phức tạp hơn */
+.navLink {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 36px;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #f39c12, #e67e22);
+  transition: all 0.4s ease-in-out;
+}
+
+.navLink:hover {
+  color: #f39c12;
+}
+
+.navLink:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Phần User */
+.userSection {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Thông tin người dùng */
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #ecf0f1;
+  font-size: 18px;
+}
+
+.username {
+  font-weight: bold;
+  color: #f1c40f;
+}
+
+/* Nút đăng xuất */
+.signOut {
+  background: #e74c3c;
+  border: none;
+  padding: 10px 18px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.signOut:hover {
+  background: linear-gradient(135deg, #c0392b, #e74c3c);
+  transform: scale(1.05);
+}
+
+/* Đăng nhập / Đăng ký */
+.authLinks {
+  display: flex;
+  gap: 20px;
+}
+
+.authLink {
+  color: #ecf0f1;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+.authLink::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #3498db, #2980b9);
+  transition: all 0.4s ease-in-out;
+}
+
+.authLink:hover {
+  color: #3498db;
+}
+
+.authLink:hover::after {
+  width: 100%;
+  left: 0;
+}

@@ -1,0 +1,90 @@
+/* styles/admin/Sidebar.module.css */
+.sidebar {
+    width: 200px;
+    background: #ffffff; /* Nền trắng cho Sidebar */
+    border-right: 1px solid #ccc;
+    padding: 2rem;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    position: fixed; /* Cố định Sidebar */
+    top: 0;
+    left: 0;
+    z-index: 100; /* Đảm bảo Sidebar nằm trên cùng */
+  }
+  
+  .title {
+    font-size: 1.8rem;
+    color: #6b48ff; /* Màu tím cho tiêu đề */
+    margin-bottom: 2rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .menuList {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+  }
+  
+  .menuItem {
+    margin-bottom: 1rem;
+  }
+  
+  .menuLink {
+    display: block; /* Link chiếm toàn bộ chiều rộng */
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #333;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease; /* Hiệu ứng mượt mà */
+  }
+  
+  .menuLink:hover {
+    color: #6b48ff;
+    background: #f9f5ff; /* Nền tím nhạt khi hover */
+  }
+  
+  .menuLink.active {
+    color: #6b48ff;
+    background: #e6e0ff; /* Nền tím nhạt đậm hơn khi active */
+    font-weight: 500;
+  }
+  
+  .logoutButton {
+    background: #6b48ff; /* Button tím */
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s ease;
+  }
+  
+  .logoutButton:hover {
+    background: #5438cc; /* Tím đậm hơn khi hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 150px;
+      padding: 1rem;
+    }
+  
+    .title {
+      font-size: 1.5rem;
+    }
+  
+    .menuLink {
+      font-size: 1rem;
+      padding: 0.5rem 0.75rem;
+    }
+  
+    .logoutButton {
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+    }
+  }

@@ -1,0 +1,40 @@
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.featureCard {
+  background: var(--background);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.featureCard h3 {
+  font-size: 1.5rem;
+  color: var(--foreground);
+  margin-bottom: 1rem;
+}
+
+.featureCard p {
+  font-size: 1rem;
+  color: #6b7280; /* Xám nhẹ */
+  line-height: 1.5;
+}
+
+@media (prefers-color-scheme: dark) {
+  .featureCard p {
+    color: #d1d5db; /* Xám sáng cho dark mode */
+  }
+}
